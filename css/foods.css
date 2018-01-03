@@ -1,0 +1,106 @@
+#shop-contents{
+	min-height:50vh;
+}
+
+#search-bar{
+	text-align:center;
+	margin:15px 0px;
+	}
+
+.search-class{
+	border:3px solid #FF8040;
+	border-radius:6px;
+	font-size:18px;
+	margin:0px 10px;
+}
+
+.search-class:focus{
+	outline:none;
+}
+
+#search-bar input{
+	padding:7px 10px;
+	font-family:Microsoft JhengHei;
+	width:400px;
+
+}
+
+#search-bar select{
+	padding:6px 30px;
+	font-family:Microsoft JhengHei;
+	cursor:pointer;
+}
+
+#search-bar button{
+	padding:7px 40px;
+	font-family:Microsoft JhengHei;
+	background-color: #FF8040;
+	color:#FFFFFF;
+	letter-spacing:2px;
+	cursor:pointer;
+	
+}
+
+#search-bar button i{
+	transform: translateY(-1px);
+}
+
+#shops{
+	display:flex;
+	max-width:70vw;
+	margin:0px auto;
+	flex-wrap:wrap;
+}
+
+.shop-card{
+	position:relative;
+	margin:10px;
+	border:1px solid #AAAAAA;
+	width:225px;
+	height:175px;
+}
+
+.shop-card img{
+	width:225px;
+	height:175px;
+}
+
+.shop-discription{
+	width:100%;
+	height:20%;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	background-color:rgba(191,191,191,0.8);
+	transition:0.5s;
+	overflow:hidden;
+}
+
+.shop-card:hover .shop-discription{
+	transition:0.5s;
+	height:100%;
+}
+
+.shop-discription .shop-name{
+	margin:3px 5px;
+	font-size:20px;
+	font-weight:500;
+	transition:0.5s;
+}
+
+.shop-discription .shop-special{
+	margin:3px 5px;
+	font-size:14px;
+	transition:0.5s;
+}
+
+.shop-card:hover .shop-discription .shop-name{
+	transition:0.5s;
+	margin-top:30px;
+	margin-bottom:15px;
+}
+
+.shop-card:hover .shop-discription .shop-special{
+	transition:1s;
+}
+

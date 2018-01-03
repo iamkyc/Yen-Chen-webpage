@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>悠 . 悠 . 鹽 . 埕</title>
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<link rel="stylesheet" type="text/css" href="./css/custom_reset.css">
+		<link rel="stylesheet" type="text/css" href="./css/transportation.css">
+	</head>
+	<body ng-app="main" ng-controller="mainController">
+		<!-- navbar -->
+		<nav class="sticky">
+			<span id="navbar-icon"><a href="index.html">悠悠鹽埕</a></span>
+			<ul id="navs">
+				<li class="nav-item"><a href="foods.html">道地美食</a></li>
+				<li class="nav-item"><a href="attractions.html">必去景點</a></li>
+				<li class="nav-item"><a href="history.html">鹽埕歷史</a></li>
+				<li class="nav-item"><a href="transportation.html">交通資訊</a></li>
+			</ul>
+			<ul id="member">
+				<li class="nav-item"><a href="login.html">登入</a></li>
+				<li class="nav-item"><a href="register.html">註冊</a></li>
+			</ul>
+		</nav>
+
+		<button ng-click="scrollTopFunc()" id="scrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+		
+		<!-- contents -->
+		<div class="title">
+			<img src="images/transportation.jpg">
+			<h3 class="title-text">交.通.資.訊</h3>
+		</div>
+
+		
+		<main id="transportation-content">
+			<div id="map"></div>
+			<div class="transport-flexbox">
+				<div id="MRT" class="transport-info">
+					<h4><i class="fa fa-subway" aria-hidden="true"></i>搭乘捷運</h4>
+					<ul>
+						<li>搭乘至 [橘線] 鹽埕埔站。</li>
+						<li><span class="tag exit">一號出口</span>鹽埕國小、駁二藝術特區、堀江商場、高雄市公共腳踏車租賃系統</li>
+						<li><span class="tag exit">二號出口</span>高雄市歷史博物館、高雄國際會議中心</li>
+						<li><span class="tag exit">三號出口</span>新樂街</li>
+						<li><span class="tag exit">四號出口</span>Mars睦工廠</li>
+						<li>下一班車往西子灣需等待<span class="time">3</span>分鐘</li>
+						<li>下一班車往南岡山需等待<span class="time">5</span>分鐘</li>
+					</ul>
+				</div>
+				<div id="bus" class="transport-info">
+					<h4><i class="fa fa-bus" aria-hidden="true"></i>搭乘公車</h4>
+					<ul>
+						<li><span class="tag location">捷運鹽埕埔站</span>50、88、205、0南、0北、33，在 [捷運鹽埕埔站] 下車</li>
+						<li><span class="tag location">駁二藝術園區</span>205、駁二專線，在 [大勇路口] 下車</li>
+						<li><span class="tag location">高雄歷史博物館</span>77、33、218、60、73，在 [歷史博物館] 下車</li>
+						<li><span class="tag location">高雄電影館/愛河</span>50、62、72、203，在 [五福四路口] 下車</li>
+					</ul>
+				</div>
+			</div>
+		</main>>
+
+		<!-- footer -->
+		<footer>
+			<div id="footer-content">
+				<div id="footer-left">
+					<p>鹽埕觀光營運處</p>
+					<p>(07)232-7881</p>
+					<p>高雄市鹽埕區大勇路236號</p>
+				</div>
+				<div id="footer-right">
+					<p>訂閱我們的訊息：</p>
+					<form>
+						<input type="text" placeholder="email">
+						<button>Send</button>
+					</form>
+				</div>
+			</div>
+			<p>Leon Kuo © 2017 All Rights Reserved 此網頁為作品集之用，部分內容為虛構。 </p>
+		</footer>
+		<script src="https://use.fontawesome.com/fb1d6d4c2c.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script src="./js/main.js"></script>
+		<script src="./js/transportation.js"></script>
+		<script async defer
+		     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChypckmfgpBSoAV9wX0uZ2uKkBnOo72gA&callback=initMap">
+		</script>
+
+		
+
+	</body>
+</html>

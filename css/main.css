@@ -1,0 +1,188 @@
+nav{
+	background-color: rgba(0,0,0,0.8);
+	vertical-align: text-top;
+	color:#DDDDDD;
+}
+
+#navs{
+	position:relative;
+	display:inline;
+	padding:0px 10px;
+	vertical-align:top;
+	
+}
+
+.nav-item{
+	display:inline;
+	line-height:100px;
+	margin:0px 15px;
+	font-size:15px;
+	cursor:pointer;
+	padding-bottom:1px;	
+}
+
+.nav-item a{
+	color:#DDDDDD;
+	vertical-align:top;
+}
+
+.nav-item a:hover{
+	border-bottom:2px solid #DDDDDD;
+}
+
+#member{
+	display:inline;
+	float:right;
+	margin-right:5%;
+}
+
+
+#navbar-icon{
+	display:inline;
+	border-right:1px solid #DDDDDD;
+	line-height:100px;
+	padding:0px 20px;
+	font-size:20px;
+	letter-spacing:5px;
+	margin-left:5%;
+	cursor:pointer;
+}
+
+#navbar-icon a{
+	color:#DDDDDD;
+}
+
+#navbar-icon a:hover{
+	color:#FFDC35;
+}
+
+.sticky{
+	position:fixed;
+	top:0px;
+	width:100%;
+	z-index:99;
+}
+
+/*scroll top button*/
+#scrollTop{
+	position:fixed;
+	right:0px;
+	bottom:10%;
+	border:none;
+	font-size:32px;
+	padding:15px 20px;
+	background-color:#FFDC35;
+	cursor:pointer;
+	transition:0.5s;
+	z-index:99;
+	display:none;
+	outline:none;
+	opacity:0.7;
+}
+
+#scrollTop:hover{
+	opacity:1;
+	transition:0.5s;
+
+}
+
+
+/*title*/
+.title{
+	position:relative;
+	text-align:center;
+	margin-top:101px;
+	height:auto;
+	background-color:#FFED97;
+}
+
+.title img{
+	max-width:100%;
+	height:auto;
+	margin:0px;
+	padding:0px;
+}
+
+.title h3{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	font-size:32px;
+	letter-spacing: 5px;
+	padding:4% 6%;
+	margin:0px;
+	background-color:rgba(225,225,225,0.2);
+}
+
+footer{
+	background-color:#222222;
+	color:#DDDDDD;
+	padding:20px 5vw;
+	font-size:14px;
+	clear:both;
+}
+
+#footer-content{
+	text-align:center;
+	margin:20px;
+	display:flex;
+	justify-content: center;
+}
+
+#footer-left{
+	border-right:1px solid #DDDDDD;
+	padding:5px 20px;
+	line-height: 25px;
+	width:300px;
+}
+
+#footer-left p{
+	text-align:right;
+}
+
+#footer-right{
+	padding:5px 20px;
+	line-height: 25px;
+	width:300px;
+}
+
+#footer-right p{
+	text-align:left;
+	vertical-align:top;
+	margin-top:7px;
+}
+
+#footer-right form{
+	text-align:left;
+}
+
+#footer-right input:focus{
+	outline:none;
+	box-shadow: inset 1px 1px 2px 1px rgba(20%,20%,40%,0.5);
+}
+
+
+#footer-right form input{
+	padding:7px;
+	width:200px;
+	font-size:16px;
+	border:none;
+	border-radius:5px 0 0 5px;
+}
+
+#footer-right form button{
+	margin:0px;
+	border:none;
+	border-radius: 0 5px 5px 0;
+	font-size:16px;
+	padding:7px;
+	cursor:pointer;
+	position:relative;
+	background-color: #FFCC22;
+	transform:translateX(-4px);
+}
+
+footer p{
+	text-align: center;
+}

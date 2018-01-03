@@ -1,0 +1,160 @@
+#frontPage{
+	background-image: url(/images/night.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	width:100vw;
+	height:100vh;
+}
+
+.frontPage-location{
+	position:absolute;
+	top:25%;
+	left:10%;
+	color:#DDDDDD;
+	padding:5px 200px 5px 5px;
+	border-bottom:2px solid #DDDDDD;
+	font-size:48px;
+}
+
+#frontPage-content{
+	position:absolute;
+	top:70%;
+	right:0px;
+	display:flex;
+}
+
+#frontPage-titleBlock{
+	background-color: rgba(50,60,70,0.7);
+	padding:20px 50px;
+	display:inline-block;
+	margin:0px 10px;
+}
+
+#title{
+	letter-spacing: 6px;
+	color:#DDDDDD;
+	font-size:30px;
+	margin-bottom:20px;
+	text-align:center;
+	padding:0px 5px;
+}
+
+#icon-block{
+	margin:0px auto;
+	text-align:center;
+}
+
+.frontPage-icon{
+	display:inline-block;
+	color:#DDDDDD;
+	width:42px;
+	height:42px;
+	line-height:42px;
+	border:1px solid #DDDDDD;
+	transition:0.5s;
+	cursor:pointer;
+	text-align:center;
+	margin:0px 10px;
+}
+
+#fb-icon:hover{
+	background-color:#3B5998;
+	border:1px solid #3B5998;
+}
+
+#ig-icon:hover{
+	background-color:#A32465;
+	border:1px solid #A32465;
+}
+
+#google-icon:hover{
+	background-color:#B71C1C;
+	border:1px solid #B71C1C;
+}
+
+#frontPage-suscribe{
+	display:inline-block;
+	background-color: rgba(189,94,0,0.7);
+	padding:1% 5%;
+	color:#DDDDDD;
+	height:inherit;
+
+}
+
+.frontPage-subtitle{
+	font-size:24px;
+	margin-bottom:10px;
+}
+
+.frontPage-text{
+	font-size:16px;
+	letter-spacing:1px;
+}
+
+
+#content{
+	position:relative;
+	width:100vw;
+	height:60vh;
+	background-color: #FFE66F;
+	display:flex;
+	border-bottom:10px solid #FFFFFF;
+	border-top:10px solid #FFFFFF;
+}
+
+#content-img{
+	width:40vw;
+	border-right:10px solid #FFFFFF;
+}
+
+#content-suscribe{
+	width:60vw;
+	padding:10vh 0px;
+}
+
+
+#content-buttons{
+	text-align:center;
+	padding:5% 0px;
+}
+
+.content-btn{
+	display:inline-block;
+	background-color: #01B468;
+	height:200px;
+	width:200px;
+	border-radius:100px;
+	border:none;
+	margin:0px 40px;
+}
+
+.content-btn img{
+	display:block;
+	margin:0px auto;
+
+}
+
+.content-btn span{
+	font-size:22px;
+	letter-spacing: 2px;
+}
+
+#content-text{
+	font-size:36px;
+	text-align:center;
+	letter-spacing: 5px;
+}
+
+#img-salecar{
+	position:absolute;
+	bottom:10%;
+	left:30%;
+	height:40vh;
+}
+
+#img-font{
+	vertical-align:middle;
+	transform:translateY(-4%);
+}
+

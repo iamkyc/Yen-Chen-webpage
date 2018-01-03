@@ -1,0 +1,48 @@
+#content{
+	padding:3% 0px;
+}
+
+article{
+	max-width:750px;
+	margin:0px auto;
+}
+
+article img{
+	display:block;
+	margin:30px auto;
+}
+
+article p{
+	padding:15px 0px;
+	line-height:35px;
+	text-align:justify;
+	color:#222222;
+}
+
+#memo{
+	margin-top:50px;
+}
+
+#fb-share{
+	color:#FFFFFF;
+	background-color:#3b5998;
+	border:none;
+	font-family:Microsoft JhengHei;
+	padding:4px 8px;
+	vertical-align: middle;
+	cursor:pointer;
+}
+
+#fb-share i{
+	margin-right:4px;
+}
+
+#views{
+	font-family:Microsoft JhengHei;
+	margin:0px 8px;
+	color:#444444;
+}
+
+#views i{
+	margin-right:4px;
+}

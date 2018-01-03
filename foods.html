@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>悠 . 悠 . 鹽 . 埕</title>
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<link rel="stylesheet" type="text/css" href="./css/custom_reset.css">
+		<link rel="stylesheet" type="text/css" href="./css/foods.css">
+		
+	</head>
+	<body ng-app="main" ng-controller="mainController">
+		<!-- navbar -->
+		<nav class="sticky">
+			<span id="navbar-icon"><a href="index.html">悠悠鹽埕</a></span>
+			<ul id="navs">
+				<li class="nav-item"><a href="foods.html">道地美食</a></li>
+				<li class="nav-item"><a href="attractions.html">必去景點</a></li>
+				<li class="nav-item"><a href="history.html">鹽埕歷史</a></li>
+				<li class="nav-item"><a href="transportation.html">交通資訊</a></li>
+			</ul>
+			<ul id="member">
+				<li class="nav-item"><a href="login.html">登入</a></li>
+				<li class="nav-item"><a href="register.html">註冊</a></li>
+			</ul>
+		</nav>
+
+		<button ng-click="scrollTopFunc()" id="scrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+		<!-- content -->
+		<div class="title">
+			<img src="images/foods.jpg">
+			<h3 class="title-text">道.地.美.食</h3>
+		</div>
+		<main id="shop-contents" >
+			<div id="search-bar">
+				<input class="search-class" placeholder="請輸入店家名稱" ng-model="searchShop">
+				<select class="search-class">
+					<option disabled selected>從類別選擇</option>
+					<option value="drinks"> 飲料</option>
+					<option value="noodles">麵食</option>
+				</select> 
+				<button class="search-class" ng-click="filter=searchShop"><i class="fa fa-search" aria-hidden="true"></i>搜尋</button>
+			</div>
+			<div id="shops">
+				<div class="shop-card" ng-repeat="shop in shops | filter:{name:filter}">
+					<img src={{shop.img}}>
+					<div class="shop-discription">
+						<h4 class="shop-name">{{shop.name}}</h4>
+						<p class="shop-special">{{shop.special}}</p>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- footer -->
+		<footer>
+			<div id="footer-content">
+				<div id="footer-left">
+					<p>鹽埕觀光營運處</p>
+					<p>(07)232-7881</p>
+					<p>高雄市鹽埕區大勇路236號</p>
+				</div>
+				<div id="footer-right">
+					<p>訂閱我們的訊息：</p>
+					<form>
+						<input type="text" placeholder="email">
+						<button>Send</button>
+					</form>
+				</div>
+			</div>
+			<p>Leon Kuo © 2017 All Rights Reserved 此網頁為作品集之用，部分內容為虛構。 </p>
+		</footer>
+		<script src="https://use.fontawesome.com/fb1d6d4c2c.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script src="./js/main.js"></script>
+		
+
+	</body>
+</html>
