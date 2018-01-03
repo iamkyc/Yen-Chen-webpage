@@ -1,6 +1,6 @@
 var shopApp = angular
 	.module("main",[])
-	.controller("mainController",function($scope){
+	.controller("mainController",function($scope,$http){
 
 		var shops = [
 			{name:"阿進切仔麵", class:"麵食", address:"高雄市鹽埕區瀨南街148號", img:"images/food_aChin.jpg", special:"切仔麵、黑白切、滷味、蘿蔔湯等傳統美味。"},
@@ -15,7 +15,8 @@ var shopApp = angular
 		];
 
 		$scope.shops = shops;
-
+		
+		// 回網頁最上端按鈕功能
 		$(window).scroll(function() {
 		    if ($(this).scrollTop() > 300 ) {
 		        $('#scrollTop').stop(true,true).fadeIn('slow');
@@ -28,6 +29,23 @@ var shopApp = angular
 			$('html,body').animate({
 				scrollTop:0
 			},'fast');
-		}		
+		}
+
+
+		//取得API資料功能
+		$http({method : 'GET',url : 'http://ptx.transportdata.tw/MOTC/v2/Rail/Metro/LiveBoard/KRTC?$select=StationID%2CEstimateTime%2CDestinationStaionID&$filter=StationID%20eq%20%27O2%27&$format=JSON'})
+            .success(function(data, status) {
+                data.forEach(function(data){
+                	if(data.DestinationStaionID==="OT1"){
+                		$scope.toEastTime = data.EstimateTime;
+                	} else if(data.DestinationStaionID==="O1"){
+						$scope.toWestTime = data.EstimateTime;
+                	}
+                })
+             })
+            .error(function(data, status) {
+                alert("Error");
+            })
+        	
 
 	});

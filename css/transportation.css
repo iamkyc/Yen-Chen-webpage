@@ -1,11 +1,17 @@
 #transportation-content{
     transform:translateY(-5px);
     padding:3% 0px;
-    height:80vh;
+}
+
+#transport-title{
+	width:60vw;
+	margin:0px auto;
+	margin-bottom:20px;
+	font-size:28px;
 }
 
 #map{
-	height:40vh;
+	height:60vh;
 	width:60vw;
 	margin:0px auto;
 

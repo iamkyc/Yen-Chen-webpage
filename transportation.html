@@ -7,6 +7,10 @@
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
 		<link rel="stylesheet" type="text/css" href="./css/custom_reset.css">
 		<link rel="stylesheet" type="text/css" href="./css/transportation.css">
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script src="./js/main.js"></script>
 	</head>
 	<body ng-app="main" ng-controller="mainController">
 		<!-- navbar -->
@@ -34,6 +38,9 @@
 
 		
 		<main id="transportation-content">
+			<div id="transport-title">
+				<h4>鹽埕區地圖與公車、捷運路線</h4>
+			</div>
 			<div id="map"></div>
 			<div class="transport-flexbox">
 				<div id="MRT" class="transport-info">
@@ -44,8 +51,10 @@
 						<li><span class="tag exit">二號出口</span>高雄市歷史博物館、高雄國際會議中心</li>
 						<li><span class="tag exit">三號出口</span>新樂街</li>
 						<li><span class="tag exit">四號出口</span>Mars睦工廠</li>
-						<li>下一班車往西子灣需等待<span class="time">3</span>分鐘</li>
-						<li>下一班車往南岡山需等待<span class="time">5</span>分鐘</li>
+					</ul>
+					<ul>
+						<li>下一班車往西子灣需等待<span class="time" ng-model="toWestTime">{{toWestTime}}</span>分鐘</li>
+						<li>下一班車往大寮需等待<span class="time" ng-model="toEastTime">{{toEastTime}}</span>分鐘</li>
 					</ul>
 				</div>
 				<div id="bus" class="transport-info">
@@ -79,9 +88,7 @@
 			<p>Leon Kuo © 2017 All Rights Reserved 此網頁為作品集之用，部分內容為虛構。 </p>
 		</footer>
 		<script src="https://use.fontawesome.com/fb1d6d4c2c.js"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-		<script src="./js/main.js"></script>
+		
 		<script src="./js/transportation.js"></script>
 		<script async defer
 		     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChypckmfgpBSoAV9wX0uZ2uKkBnOo72gA&callback=initMap">
