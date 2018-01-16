@@ -8,6 +8,7 @@ article{
 }
 
 article img{
+	max-width:750px;
 	display:block;
 	margin:30px auto;
 }
@@ -17,10 +18,12 @@ article p{
 	line-height:35px;
 	text-align:justify;
 	color:#222222;
+	font-size:18px;
 }
 
 #memo{
 	margin-top:50px;
+	font-size:14px;
 }
 
 #fb-share{
@@ -45,4 +48,28 @@ article p{
 
 #views i{
 	margin-right:4px;
+}
+
+@media screen and (max-width:750px){
+	article p{
+		width:98vw;
+		margin:0px auto;
+		font-size:18px;
+		line-height:28px;
+		letter-spacing:1px;
+	}
+
+	article img{
+		margin:10px 1vw;
+		width:98vw;
+		display:block;
+	}
+
+	#fb-share{
+		margin-left:1vw;
+	}
+
+	#memo{
+		font-size:12px;
+	}
 }

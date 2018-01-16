@@ -10,23 +10,24 @@
 
 		
 	</head>
-	<body ng-app="main" ng-controller="mainController">
+	<body>
 		<!-- navbar -->
-		<nav class="sticky">
+		<nav class="on-top">
 			<span id="navbar-icon"><a href="index.html">悠悠鹽埕</a></span>
 			<ul id="navs">
 				<li class="nav-item"><a href="foods.html">道地美食</a></li>
 				<li class="nav-item"><a href="attractions.html">必去景點</a></li>
 				<li class="nav-item"><a href="history.html">鹽埕歷史</a></li>
 				<li class="nav-item"><a href="transportation.html">交通資訊</a></li>
+				<span id="member">
+					<li class="nav-item"><a href="login.html">登入</a></li>
+					<li class="nav-item"><a href="register.html">註冊</a></li>
+				</span>
 			</ul>
-			<ul id="member">
-				<li class="nav-item"><a href="login.html">登入</a></li>
-				<li class="nav-item"><a href="register.html">註冊</a></li>
-			</ul>
+			<button id="toggle-button" onclick="menuState.toggleMenu()"><i class="fa fa-bars" aria-hidden="true"></i></button>
 		</nav>
 
-		<button ng-click="scrollTopFunc()" id="scrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+		<button onclick="scrollTopFunc()" id="scrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
 		<!-- history -->
 		<div class="title">
@@ -43,7 +44,7 @@
 
 				<p>三百多年前的打狗地區，還沒有港口可言，海岸是由沙洲所圍繞形成的潟湖，但是康熙晚期（約 1720 年），清廷轄下的鳳山縣治看中愛河口的濕地適合曬鹽，於是向漳州府南靖縣招募鹽丁趙元、蔡媽為、黃孔等人。繼福建漁民之後，福建的鹽丁也移民來打狗了，雖然只有二十餘人，但足以將愛河口西側的沼澤地開闢為一畝畝鹽田，穩定地產出鹽巴。看似不起眼的鹽巴，竟成為鳳山縣最重要的稅收來源，佔了當時的三到四成。鹽埕埔的鹽，對鳳山縣來說，幾乎就跟黃金沒有兩樣。</p>
 
-				<img src="images/old_yencheng2.jpg" width="700px">
+				<img src="images/old_yencheng2.jpg">
 
 				<p>1908年高雄港築港完成，以港底泥沙覆蓋在本區，從鹽田澤國搖身成為海埔新生地。來往高雄港的各國貨船、郵輪改停泊至鹽埕埔旁的碼頭，鹽埕埔成為貨物的集散地、人潮的轉運站，因為交通樞紐的地位，很快就發展出商業聚落。這裡可以看到來自世界各地各種新奇古怪的事物，各種異味美食，各色人種。日治時期鹽埕，可是打狗最國際化的地方。當時最著名的商場莫過於 1936 年開始營業的「銀座商場」，空間為長廊式的商店街，販賣百貨及各式衣飾，專門吸引貴婦採購，戰後更名為國際商場。原本鹽埕閃耀的銀色光芒是鹽粒，如今換成一件件珠寶首飾。1928年，高雄市役所遷至本區榮町（即舊高雄市政府，今高雄市立歷史博物館），發展迅速。</p>
 
@@ -76,7 +77,6 @@
 
 		<script src="https://use.fontawesome.com/fb1d6d4c2c.js"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<script src="./js/main.js"></script>
 	</body>
 </html>

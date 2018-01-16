@@ -8,23 +8,24 @@
 		<link rel="stylesheet" type="text/css" href="./css/custom_reset.css">
 		<link rel="stylesheet" type="text/css" href="./css/attractions.css">
 	</head>
-	<body ng-app="main" ng-controller="mainController">
+	<body>
 		<!-- navbar -->
-		<nav class="sticky">
+		<nav class="on-top">
 			<span id="navbar-icon"><a href="index.html">悠悠鹽埕</a></span>
 			<ul id="navs">
 				<li class="nav-item"><a href="foods.html">道地美食</a></li>
 				<li class="nav-item"><a href="attractions.html">必去景點</a></li>
 				<li class="nav-item"><a href="history.html">鹽埕歷史</a></li>
 				<li class="nav-item"><a href="transportation.html">交通資訊</a></li>
+				<span id="member">
+					<li class="nav-item"><a href="login.html">登入</a></li>
+					<li class="nav-item"><a href="register.html">註冊</a></li>
+				</span>
 			</ul>
-			<ul id="member">
-				<li class="nav-item"><a href="login.html">登入</a></li>
-				<li class="nav-item"><a href="register.html">註冊</a></li>
-			</ul>
+			<button id="toggle-button" onclick="menuState.toggleMenu()"><i class="fa fa-bars" aria-hidden="true"></i></button>
 		</nav>
 
-		<button ng-click="scrollTopFunc()" id="scrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+		<button onclick="scrollTopFunc()" id="scrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
 
 		<!-- attraction -->
@@ -141,7 +142,6 @@
 		</footer>
 		<script src="https://use.fontawesome.com/fb1d6d4c2c.js"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<script src="./js/attractions.js"></script>
 		<script src="./js/main.js"></script>
 	</body>

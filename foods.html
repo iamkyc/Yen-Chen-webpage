@@ -9,48 +9,53 @@
 		<link rel="stylesheet" type="text/css" href="./css/foods.css">
 		
 	</head>
-	<body ng-app="main" ng-controller="mainController">
+	<body>
 		<!-- navbar -->
-		<nav class="sticky">
+		<nav class="on-top">
 			<span id="navbar-icon"><a href="index.html">悠悠鹽埕</a></span>
 			<ul id="navs">
 				<li class="nav-item"><a href="foods.html">道地美食</a></li>
 				<li class="nav-item"><a href="attractions.html">必去景點</a></li>
 				<li class="nav-item"><a href="history.html">鹽埕歷史</a></li>
 				<li class="nav-item"><a href="transportation.html">交通資訊</a></li>
+				<span id="member">
+					<li class="nav-item"><a href="login.html">登入</a></li>
+					<li class="nav-item"><a href="register.html">註冊</a></li>
+				</span>
 			</ul>
-			<ul id="member">
-				<li class="nav-item"><a href="login.html">登入</a></li>
-				<li class="nav-item"><a href="register.html">註冊</a></li>
-			</ul>
+			<button id="toggle-button" onclick="menuState.toggleMenu()"><i class="fa fa-bars" aria-hidden="true"></i></button>
 		</nav>
 
-		<button ng-click="scrollTopFunc()" id="scrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+		<button onclick="scrollTopFunc()" id="scrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
 		<!-- content -->
 		<div class="title">
 			<img src="images/foods.jpg">
 			<h3 class="title-text">道.地.美.食</h3>
 		</div>
-		<main id="shop-contents" >
+		<main ng-app="food-main" ng-controller="foodMainController" id="shop-contents" >
 			<div id="search-bar">
 				<input class="search-class" placeholder="請輸入店家名稱" ng-model="searchShop">
-				<select class="search-class">
-					<option disabled selected>從類別選擇</option>
-					<option value="drinks"> 飲料</option>
+				<select class="search-class" ng-model="searchClass">
+					<option value="">不限</option>
+					<option value="drinks">飲料</option>
 					<option value="noodles">麵食</option>
+					<option value="rice">飯類</option>
+					<option value="snacks">點心</option>
 				</select> 
-				<button class="search-class" ng-click="filter=searchShop"><i class="fa fa-search" aria-hidden="true"></i>搜尋</button>
+				<button class="search-class" ng-click="filter={searchShop,searchClass}"><i class="fa fa-search" aria-hidden="true"></i>搜尋</button>
 			</div>
 			<div id="shops">
-				<div class="shop-card" ng-repeat="shop in shops | filter:{name:filter}">
+				<div class="shop-card" ng-repeat="shop in filteredShops = (shops | filter:{name:filter.searchShop,class:filter.searchClass})">
 					<img src={{shop.img}}>
 					<div class="shop-discription">
 						<h4 class="shop-name">{{shop.name}}</h4>
 						<p class="shop-special">{{shop.special}}</p>
 					</div>
 				</div>
+				<p class="search-warning" ng-hide="filteredShops.length">無任何查詢結果Orz</p>
 			</div>
+			<button id="return-btn" class="search-class" ng-show="filter.searchShop || filter.searchClass" ng-click="returnBack()">回列表</button>
 		</main>
 
 		<!-- footer -->
@@ -75,6 +80,7 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<script src="./js/main.js"></script>
+		<script src="./js/food.js"></script>
 		
 
 	</body>

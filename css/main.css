@@ -1,7 +1,12 @@
+:root{
+	--nav-height:9vh;
+}
+
 nav{
-	background-color: rgba(0,0,0,0.8);
+	position:relative;
 	vertical-align: text-top;
 	color:#DDDDDD;
+	height:var(--nav-height);
 }
 
 #navs{
@@ -9,16 +14,20 @@ nav{
 	display:inline;
 	padding:0px 10px;
 	vertical-align:top;
-	
 }
 
 .nav-item{
 	display:inline;
-	line-height:100px;
+	line-height:var(--nav-height);
 	margin:0px 15px;
 	font-size:15px;
 	cursor:pointer;
 	padding-bottom:1px;	
+}
+
+.add-height{
+	height:12vh;
+	line-height:12vh;
 }
 
 .nav-item a{
@@ -40,7 +49,7 @@ nav{
 #navbar-icon{
 	display:inline;
 	border-right:1px solid #DDDDDD;
-	line-height:100px;
+	line-height:var(--nav-height);
 	padding:0px 20px;
 	font-size:20px;
 	letter-spacing:5px;
@@ -56,11 +65,37 @@ nav{
 	color:#FFDC35;
 }
 
+#toggle-button{
+	font-size:20px;
+	padding:5px 12px;
+	background-color:rgba(0,0,0,0);
+	border:1px solid white;
+	color:white;
+	border-radius:3px;
+	display: none;
+}
+
+.on-top{
+	display:block;
+	background-color:black;
+	color:white;
+	z-index:99;
+	transition:1s;
+}
+
 .sticky{
+	display:block;
+	background-color: rgba(0,0,0,0.8);
 	position:fixed;
 	top:0px;
 	width:100%;
 	z-index:99;
+	transition:0.2s;
+}
+
+.hide{
+	top:-9vh;
+	transition:0.2s;
 }
 
 /*scroll top button*/
@@ -83,17 +118,21 @@ nav{
 #scrollTop:hover{
 	opacity:1;
 	transition:0.5s;
-
 }
 
-
 /*title*/
+
+
 .title{
 	position:relative;
 	text-align:center;
-	margin-top:101px;
 	height:auto;
-	background-color:#FFED97;
+	padding:0px;
+	margin:0px;
+}
+
+.add-top-margin{
+	margin-top:var(--nav-height);
 }
 
 .title img{
@@ -118,7 +157,7 @@ nav{
 footer{
 	background-color:#222222;
 	color:#DDDDDD;
-	padding:20px 5vw;
+	padding:20px 0px;
 	font-size:14px;
 	clear:both;
 }
@@ -134,7 +173,7 @@ footer{
 	border-right:1px solid #DDDDDD;
 	padding:5px 20px;
 	line-height: 25px;
-	width:300px;
+	max-width:300px;
 }
 
 #footer-left p{
@@ -144,7 +183,7 @@ footer{
 #footer-right{
 	padding:5px 20px;
 	line-height: 25px;
-	width:300px;
+	max-width:300px;
 }
 
 #footer-right p{
@@ -185,4 +224,163 @@ footer{
 
 footer p{
 	text-align: center;
+}
+
+/*小於768px*/
+@media screen and (max-width:768px){
+	nav{
+		background-color:black;
+	}
+
+	#navs{
+		display:inline;
+		justify-content:center;
+		background-color:black;
+	}
+
+	#navbar-icon{
+		margin-left:1%;
+		padding:0px 15px;
+		font-size:16px;
+	}
+
+	#member{
+		min-width:70px;
+	}
+
+	.nav-item{
+		font-size:14px;
+		margin:0px 5px;
+
+	}
+
+	#toggle-button{
+		display:none;
+	}
+
+	.sticky{
+		background-color:black;
+	}
+
+	#footer-right form input{
+		width:150px;
+		font-size:14px;
+	}
+
+	#footer-right form button{
+		font-size:14px;
+	}
+}
+
+/*小於600px*/
+@media screen and (max-width:600px){
+	nav{
+		background-color:black;
+	}
+
+	#navs{
+		display:none;
+		padding-left:5%;
+		justify-content:start;
+		background-color:black;
+		position:fixed;
+		width:100vw;
+	}
+
+	#navbar-icon{
+		font-size:18px;
+	}
+
+	.nav-item{
+		display:block;
+		line-height:25px;
+		height:30px;
+	}
+
+	#member{
+		float:left;
+		margin:0px;
+		padding-top:7px;
+}
+
+	#navbar-icon{
+		border-right:0px;
+	}
+
+	#toggle-button{
+		position:absolute;
+		display:inline;
+		right:5vw;
+		top:50%;
+		transform: translateY(-50%);
+	}
+
+	.sticky{
+		background-color:black;
+	}
+	.title h3{
+		position:relative;
+		top:0;
+		left:0;
+		letter-spacing:3px;
+		transform:none;
+		font-size:28px;
+		padding:6% 0px;
+		background-color:#FFE66F;
+	}
+}
+
+/*小於500*/
+@media screen and (max-width:500px){
+	footer{
+		font-size:14px;
+	}
+
+	#footer-content{
+		display:block;
+	}
+
+	#footer-left{
+		display:block;
+		border:0px;
+		padding:0px;
+		margin:0px auto;
+		width:500px;
+	}
+
+	#footer-left p{
+		text-align:center;
+		font-size:12px;
+	}
+
+	#footer-right{
+		padding:5px 0px;
+		line-height: 25px;
+		margin:0px auto;
+	}
+
+	#footer-right p{
+		text-align:center;
+		margin-top:7px;
+	}
+
+	#footer-right form{
+		text-align:center;
+	}
+
+
+	#footer-right form input{
+		padding:7px;
+		width:200px;
+		font-size:14px;
+	}
+
+	#footer-right form button{
+		font-size:14px;
+		padding:7px 10px;
+	}
+
+	footer p{
+		font-size:10px;
+	}
 }

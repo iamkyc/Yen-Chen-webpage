@@ -10,3 +10,22 @@ function initMap() {
           map: map
         });
       }
+
+//取得API資料功能
+$.ajax({
+  url: 'http://ptx.transportdata.tw/MOTC/v2/Rail/Metro/LiveBoard/KRTC?$select=StationID%2CEstimateTime%2CDestinationStaionID&$filter=StationID%20eq%20%27O2%27&$format=JSON',
+  type:'GET',
+  dataType:'json',
+  success:function(data){
+    data.forEach(function(data){
+      if(data.DestinationStaionID==="OT1"){
+        $("#toEastTime").text(data.EstimateTime);
+      } else if(data.DestinationStaionID==="O1"){
+        $("#toWestTime").text(data.EstimateTime);
+      }
+    });
+  },
+  error:function(e){
+    console.log(e);
+  }
+})

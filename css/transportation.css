@@ -4,7 +4,7 @@
 }
 
 #transport-title{
-	width:60vw;
+	max-width:1200px;
 	margin:0px auto;
 	margin-bottom:20px;
 	font-size:28px;
@@ -12,14 +12,13 @@
 
 #map{
 	height:60vh;
-	width:60vw;
+	max-width:1200px;
 	margin:0px auto;
-
 }
 
 .transport-flexbox{
 	display:flex;
-	width:60vw;
+	max-width:1200px;
 	justify-content:center;
 	margin:0px auto;
 }
@@ -28,6 +27,8 @@
 	width:49%;
 	margin:10px 0px;
 	padding:10px;
+	border:1px solid #BBBBBB;
+	border-radius:7px;
 }
 
 .transport-info h4{
@@ -43,16 +44,20 @@
 .transport-info ul li{
 	line-height: 28px;
 }
-
-.transport-info ul li .exit{
-	color:#004B97;
-	border:1px solid #004B97;
-}
  
 .tag{
-	font-size:14px;
 	padding:1px 5px;
-	margin-right:2px;
+	margin-right:5px;
+}
+
+.exit{
+	color:#004B97;
+	border-right:1px solid #004B97;
+}
+
+.location{
+	color:#CE0000;
+	border-right:1px solid #CE0000;
 }
 
 .transport-info ul li .time{
@@ -60,16 +65,62 @@
 	padding:0px 5px;
 }
 
-.location{
-	color:#CE0000;
-	border:1px solid #CE0000;
-}
+
 
 #MRT{
 	margin-right:2%;
-	background-color:#84C1FF;
+	border-bottom:7px solid #84C1FF;
 }
 
 #bus{
-	background-color:#FFB5B5;
+	border-bottom:7px solid #FFB5B5;
+}
+
+@media screen and (max-width:768px){
+	body{
+		overflow-x:hidden;
+	}
+
+	#MRT{
+		margin:10px auto; 
+	}
+
+	#transport-title{
+		margin:0px;
+	}
+
+	#transport-title h4{
+		margin:0px;
+		margin-bottom:5px;
+		font-size:22px;
+	}
+
+	.transport-flexbox{
+		display:block;
+		margin:0px auto;
+	}
+
+	.transport-info{
+		width:95vw;
+		margin:10px auto;
+		padding:10px 1vw;
+	}
+}
+
+@media screen and (max-width:425px){
+	.trnsport-content{
+		padding:0px;
+	}
+	#transport-title h4{
+		display:none;
+	}
+	.transport-info ul li{
+		font-size:14px;
+		line-height:24px;
+	}
+
+	.transport-info h4{
+		margin:5px 0px;
+		font-size:18px;
+	}
 }

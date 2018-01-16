@@ -9,26 +9,26 @@
 		<link rel="stylesheet" type="text/css" href="./css/transportation.css">
 
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<script src="./js/main.js"></script>
 	</head>
-	<body ng-app="main" ng-controller="mainController">
+	<body>
 		<!-- navbar -->
-		<nav class="sticky">
+		<nav class="on-top">
 			<span id="navbar-icon"><a href="index.html">悠悠鹽埕</a></span>
 			<ul id="navs">
 				<li class="nav-item"><a href="foods.html">道地美食</a></li>
 				<li class="nav-item"><a href="attractions.html">必去景點</a></li>
 				<li class="nav-item"><a href="history.html">鹽埕歷史</a></li>
 				<li class="nav-item"><a href="transportation.html">交通資訊</a></li>
+				<span id="member">
+					<li class="nav-item"><a href="login.html">登入</a></li>
+					<li class="nav-item"><a href="register.html">註冊</a></li>
+				</span>
 			</ul>
-			<ul id="member">
-				<li class="nav-item"><a href="login.html">登入</a></li>
-				<li class="nav-item"><a href="register.html">註冊</a></li>
-			</ul>
+			<button id="toggle-button" onclick="menuState.toggleMenu()"><i class="fa fa-bars" aria-hidden="true"></i></button>
 		</nav>
 
-		<button ng-click="scrollTopFunc()" id="scrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+		<button onclick="scrollTopFunc()" id="scrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 		
 		<!-- contents -->
 		<div class="title">
@@ -36,7 +36,6 @@
 			<h3 class="title-text">交.通.資.訊</h3>
 		</div>
 
-		
 		<main id="transportation-content">
 			<div id="transport-title">
 				<h4>鹽埕區地圖與公車、捷運路線</h4>
@@ -53,8 +52,8 @@
 						<li><span class="tag exit">四號出口</span>Mars睦工廠</li>
 					</ul>
 					<ul>
-						<li>下一班車往西子灣需等待<span class="time" ng-model="toWestTime">{{toWestTime}}</span>分鐘</li>
-						<li>下一班車往大寮需等待<span class="time" ng-model="toEastTime">{{toEastTime}}</span>分鐘</li>
+						<li>下一班車往西子灣需等待<span id="toWestTime" class="time"></span>分鐘</li>
+						<li>下一班車往大寮需等待<span id="toEastTime" class="time"></span>分鐘</li>
 					</ul>
 				</div>
 				<div id="bus" class="transport-info">
@@ -67,7 +66,7 @@
 					</ul>
 				</div>
 			</div>
-		</main>>
+		</main>
 
 		<!-- footer -->
 		<footer>

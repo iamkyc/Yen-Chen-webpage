@@ -1,3 +1,7 @@
+input, select{
+	margin:0px;
+	padding:0px;
+}
 #shop-contents{
 	min-height:50vh;
 }
@@ -29,6 +33,7 @@
 	padding:6px 30px;
 	font-family:Microsoft JhengHei;
 	cursor:pointer;
+	width:200px;
 }
 
 #search-bar button{
@@ -45,9 +50,14 @@
 	transform: translateY(-1px);
 }
 
+#search-bar button:hover{
+	background-color: #F75000;
+	border-color:	#F75000;
+}
+
 #shops{
 	display:flex;
-	max-width:70vw;
+	max-width:990px;
 	margin:0px auto;
 	flex-wrap:wrap;
 }
@@ -102,5 +112,116 @@
 
 .shop-card:hover .shop-discription .shop-special{
 	transition:1s;
+}
+
+.search-warning{
+	font-size:18px;
+	font-weight:bold;
+	margin:5vh auto;
+}
+
+#return-btn{
+	height:40px;
+	background-color:	#02C874;
+	border-color:#02C874;
+	color:#FFF;
+	display:block;
+	margin:2vh auto;
+	font-family:Microsoft JhengHei;
+	cursor:pointer;
+}
+
+#return-btn:hover{
+	background-color:#019858;
+	border-color: #019858;
+}
+
+@media screen and (min-width:1440px){
+	#shops{
+		max-width:1250px;
+	}
+}
+
+@media screen and (max-width:1000px){
+	#shops{
+		max-width:745px;
+	}
+}
+
+@media screen and (max-width:840px){
+	.search-class{
+		margin:0px 5px;
+	}
+
+	#search-bar input{
+		padding:7px 10px;
+		width:250px;
+	}
+
+	#search-bar select{
+		padding:6px 10px;
+		width:120px;
+	}
+
+	#search-bar button{
+		padding:7px 20px;
+	}
+}
+
+@media screen and (max-width:750px){
+	#shops{
+		max-width:495px;
+	}
+}
+
+@media screen and (max-width:540px){
+	.search-class{
+		margin:5px auto;
+		display:block;
+	}
+
+	#search-bar input{
+		padding:6px 5px;
+		width:92%;
+	}
+
+	#search-bar select{
+		display:inline-block;
+		padding:5px 5px;
+		width:70%;
+	}
+
+	#search-bar button{
+		display:inline;
+		padding:6px 15px;
+		width:25%;
+	}
+
+	#search-bar button i{
+			display:none;
+	}
+}
+
+@media screen and (max-width:500px){
+	#shops{
+		max-width:370px;
+	}
+
+	.shop-card{
+		position:relative;
+		margin:10px;
+		border:1px solid #AAAAAA;
+		width:100%;
+		height:225px;
+	}
+
+	.shop-card img{
+		width:100%;
+		height:225px;
+	}
+
+	.shop-discription{
+		height:15%;
+	}
 }
 
