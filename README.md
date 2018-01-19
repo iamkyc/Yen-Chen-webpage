@@ -1,8 +1,9 @@
 ## 悠悠鹽埕-鹽埕介紹網站
 
-介紹鹽埕的景點、美食、歷史、交通方式，技術上主要使用Angular與RWD
+介紹鹽埕的景點、美食、歷史、交通方式，技術上主要使用Angular與RWD，網站請見：https://iamkyc.github.io/Yen-Chen-webpage/index.html
 
 ### 技術與嘗試
+
 * 使用Angular達成呈列美食、搜索美食功能
 * 響應式頁面(RWD)
 * 使用google map api

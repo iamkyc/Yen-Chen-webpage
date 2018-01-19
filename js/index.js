@@ -17,5 +17,3 @@ if($(window).height()>=750){
 		$(".frontPage-subtitle").removeClass("show-text");
 	})
 }
-
-console.log($(window).height());
