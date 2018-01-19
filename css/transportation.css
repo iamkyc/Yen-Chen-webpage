@@ -7,7 +7,11 @@
 	max-width:1200px;
 	margin:0px auto;
 	margin-bottom:20px;
-	font-size:28px;
+}
+
+#transport-title h4{
+	margin:0px;
+	font-size:24px;
 }
 
 #map{
@@ -65,8 +69,6 @@
 	padding:0px 5px;
 }
 
-
-
 #MRT{
 	margin-right:2%;
 	border-bottom:7px solid #84C1FF;
@@ -80,6 +82,13 @@
 	body{
 		overflow-x:hidden;
 	}
+	#transportation-content{
+		padding:4px 0px;
+	}
+
+	#transport-title h4{
+		display:none;
+	}
 
 	#MRT{
 		margin:10px auto; 
@@ -87,12 +96,6 @@
 
 	#transport-title{
 		margin:0px;
-	}
-
-	#transport-title h4{
-		margin:0px;
-		margin-bottom:5px;
-		font-size:22px;
 	}
 
 	.transport-flexbox{
@@ -108,12 +111,10 @@
 }
 
 @media screen and (max-width:425px){
-	.trnsport-content{
-		padding:0px;
+	#transportation-content{
+		padding:2% 0px;
 	}
-	#transport-title h4{
-		display:none;
-	}
+	
 	.transport-info ul li{
 		font-size:14px;
 		line-height:24px;

@@ -18,10 +18,6 @@
 				<li class="nav-item"><a href="attractions.html">必去景點</a></li>
 				<li class="nav-item"><a href="history.html">鹽埕歷史</a></li>
 				<li class="nav-item"><a href="transportation.html">交通資訊</a></li>
-				<span id="member">
-					<li class="nav-item"><a href="login.html">登入</a></li>
-					<li class="nav-item"><a href="register.html">註冊</a></li>
-				</span>
 			</ul>
 			<button id="toggle-button" onclick="menuState.toggleMenu()"><i class="fa fa-bars" aria-hidden="true"></i></button>
 		</nav>
@@ -43,7 +39,7 @@
 					<option value="rice">飯類</option>
 					<option value="snacks">點心</option>
 				</select> 
-				<button class="search-class" ng-click="filter={searchShop,searchClass}"><i class="fa fa-search" aria-hidden="true"></i>搜尋</button>
+				<button class="search-class" ng-click="filter={searchShop,searchClass}"><i class="fa fa-search" aria-hidden="true"></i><span>搜尋</span></button>
 			</div>
 			<div id="shops">
 				<div class="shop-card" ng-repeat="shop in filteredShops = (shops | filter:{name:filter.searchShop,class:filter.searchClass})">

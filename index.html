@@ -7,67 +7,39 @@
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
 		<link rel="stylesheet" type="text/css" href="./css/custom_reset.css">
 		<link rel="stylesheet" type="text/css" href="./css/index.css">
-		<script src="https://use.fontawesome.com/fb1d6d4c2c.js"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="./js/index.js"></script>
 	</head>
 	<body>
 		<!-- navbar -->
-		<nav class="sticky add-height">
-			<span id="navbar-icon" class="add-height"><a href="index.html">悠悠鹽埕</a></span>
+		<nav class="on-top">
+			<span id="navbar-icon"><a href="index.html">悠悠鹽埕</a></span>
 			<ul id="navs">
-				<li class="nav-item add-height"><a href="foods.html">道地美食</a></li>
-				<li class="nav-item add-height"><a href="attractions.html">必去景點</a></li>
-				<li class="nav-item add-height"><a href="history.html">鹽埕歷史</a></li>
-				<li class="nav-item add-height"><a href="transportation.html">交通資訊</a></li>
+				<li class="nav-item"><a href="foods.html">道地美食</a></li>
+				<li class="nav-item"><a href="attractions.html">必去景點</a></li>
+				<li class="nav-item"><a href="history.html">鹽埕歷史</a></li>
+				<li class="nav-item"><a href="transportation.html">交通資訊</a></li>
 			</ul>
-			<ul id="member">
-				<li class="nav-item add-height"><a href="login.html">登入</a></li>
-				<li class="nav-item add-height"><a href="register.html">註冊</a></li>
-			</ul>
-			<button id="toggle-button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+			<button id="toggle-button" onclick="menuState.toggleMenu()"><i class="fa fa-bars" aria-hidden="true"></i></button>
 		</nav>
-
 
 		<!-- front page -->
 		<div id="frontPage">
-			<p class="frontPage-location">駁二</p>
 			<div id="frontPage-content">
 				<div id="frontPage-titleBlock">
-					<p id="title">悠。悠。鹽。埕</p>
-					<div id="icon-block">
-						<span id="fb-icon" class="frontPage-icon"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></span>
-						<span id="google-icon" class="frontPage-icon"><i class="fa fa-google fa-lg" aria-hidden="true"></i></span>
-						<span id="ig-icon" class="frontPage-icon"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></span>
-					</div>
+					<a href="./foods.html" id="title"><span>悠 悠</span><span>鹽 埕</span></a>
+				</div>
+				<p id="annotation">美食 | 景點 | 歷史</p>
+				<div id="icon-block">
+					<span id="fb-icon" class="frontPage-icon"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></span>
+					<span id="google-icon" class="frontPage-icon"><i class="fa fa-google fa-lg" aria-hidden="true"></i></span>
+					<span id="ig-icon" class="frontPage-icon"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></span>
 				</div>
 			
 				<div id="frontPage-suscribe">
-					<p class="frontPage-subtitle">聽聽城市的老故事</p>
+					<p class="frontPage-subtitle">看看城市的老地方</p>
 					<p class="frontPage-text">暖光照映著磚道，老倉庫輕輕細數著來往的遊人。<br/>時代不留情的前進，唯不變的是在鹽埕的那份純樸與溫暖。<br/>
-					享用完鮮美的魚粥，再配上一點滷味、奶茶， 坐著輕軌，靜靜體會喧囂中那一點的寧靜， 慢慢聽著，崛江訴說的老故事。</p>
+					享用完鮮美的魚粥，再配上一點滷味、奶茶，<br/> 坐著輕軌，靜靜體會喧囂中那一點的寧靜，<br/> 慢慢聽著，崛江訴說的老故事。</p>
 				</div>
 			</div>
-		</div>
-
-		<!-- content -->
-		<div id="content">
-			<img id="content-img" src="images/yencheng2.jpg">
-			<div id="content-suscribe">
-				<p id="content-text">來到了<img id="img-font" src="images/yencheng.png" height="80px">，不妨坐坐再走吧！</p>
-				<div id="content-buttons">
-					<button class="content-btn">
-						<img src="images/ancient-concrete.png" width="110px" height="80px">
-						<span>探訪景點</span>
-					</button>
-					<button class="content-btn">
-						<img src="images/meal.png" width="110px" height="80px">
-						<span>道地美食</span>
-					</button>
-
-				</div>
-			</div>
-			<img id="img-salecar" src="images/sale-car.png">
 		</div>
 
 		<!-- footer -->
@@ -88,6 +60,9 @@
 			</div>
 			<p>Leon Kuo © 2017 All Rights Reserved 此網頁為作品集之用，部分內容為虛構。 </p>
 		</footer>
-
+		<script src="https://use.fontawesome.com/fb1d6d4c2c.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="./js/index.js"></script>
+		<script src="./js/main.js"></script>
 	</body>
 </html>

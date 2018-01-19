@@ -33,10 +33,12 @@ var menuState={
             if(nowScrollTop === 0){
                 $('nav').attr('class','on-top');
                 title.removeClass('add-top-margin');
+                $("#frontPage").removeClass('add-top-margin');
             }
             else if(nowScrollTop>navbarHeight){
                 navbar.attr('class','sticky');
                 title.addClass('add-top-margin');
+                $("#frontPage").addClass('add-top-margin');
             }
             //往上滑
             if(nowScrollTop < previousScrollTop){
@@ -60,10 +62,6 @@ function scrollTopFunc(){
         scrollTop:0
     },'fast');
 }
-
-//  function toggleMenu(){
-//     $('#navs').slideToggle();
-// }
 
 
 
